@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A warm, modern cafe website featuring menu highlights, signature drinks, opening hours, and contact details."
+    />
+    <title>Maison Noir Cafe</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Maison Noir Cafe home">
+        <span class="brand-mark">MN</span>
+        <span class="brand-copy">
+          <strong>Maison Noir</strong>
+          <small>Cafe & Roastery</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#experience">Experience</a>
+        <a href="#visit">Visit</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero section">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Small batches. Slow mornings. Better coffee.</p>
+          <h1>Crafted cafe moments with a bold, modern edge.</h1>
+          <p class="lede">
+            Maison Noir is a neighborhood cafe for espresso purists, pastry
+            lovers, and anyone who wants a calm place to start the day well.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#menu">Explore Menu</a>
+            <a class="button button-secondary" href="#visit">Plan a Visit</a>
+          </div>
+          <div class="hero-metrics" aria-label="Cafe highlights">
+            <div>
+              <strong>12</strong>
+              <span>beans on rotation</span>
+            </div>
+            <div>
+              <strong>7</strong>
+              <span>house-made pastries</span>
+            </div>
+            <div>
+              <strong>Daily</strong>
+              <span>fresh roast drops</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card reveal">
+          <div class="hero-card-top">
+            <p>Today’s Pick</p>
+            <span>02</span>
+          </div>
+          <div class="featured-drink">
+            <div class="drink-art" aria-hidden="true">
+              <div class="cup"></div>
+              <div class="steam steam-one"></div>
+              <div class="steam steam-two"></div>
+              <div class="steam steam-three"></div>
+            </div>
+            <div>
+              <h2>Cardamom Oat Latte</h2>
+              <p>Velvety oat milk, two shots, and a whisper of spice.</p>
+            </div>
+          </div>
+          <div class="hero-note">
+            <span>Roast profile</span>
+            <strong>Chocolate, hazelnut, citrus</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section split-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">About the cafe</p>
+          <h2>Designed for easy conversations and excellent espresso.</h2>
+        </div>
+        <div class="about-grid">
+          <article class="feature-card reveal">
+            <h3>Quiet, intentional space</h3>
+            <p>
+              Warm wood, natural light, and a layout that keeps the room open
+              without feeling empty.
+            </p>
+          </article>
+          <article class="feature-card reveal">
+            <h3>Seasonal sourcing</h3>
+            <p>
+              We rotate single-origin beans and match the pastry menu to what is
+              best right now.
+            </p>
+          </article>
+          <article class="feature-card reveal">
+            <h3>Made to linger</h3>
+            <p>
+              Fast service at the bar, comfortable seating, and music that
+              stays in the background.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="menu" class="section menu-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Menu highlights</p>
+          <h2>Filter by mood, not just by category.</h2>
+        </div>
+
+        <div class="menu-filters reveal" role="tablist" aria-label="Menu filters">
+          <button class="filter-button is-active" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter="coffee">Coffee</button>
+          <button class="filter-button" type="button" data-filter="tea">Tea</button>
+          <button class="filter-button" type="button" data-filter="bites">Bites</button>
+          <button class="filter-button" type="button" data-filter="dessert">Dessert</button>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-item reveal" data-category="coffee">
+            <h3>Maison Espresso</h3>
+            <p>Two-shot espresso with a sweet crema and dark cocoa finish.</p>
+            <span>$4.50</span>
+          </article>
+          <article class="menu-item reveal" data-category="coffee">
+            <h3>Cardamom Oat Latte</h3>
+            <p>Spiced, creamy, and balanced with a toasty caramel note.</p>
+            <span>$6.50</span>
+          </article>
+          <article class="menu-item reveal" data-category="tea">
+            <h3>Jasmine Citrus Tea</h3>
+            <p>Bright green tea with orange peel and a fragrant floral finish.</p>
+            <span>$4.75</span>
+          </article>
+          <article class="menu-item reveal" data-category="bites">
+            <h3>Herbed Focaccia</h3>
+            <p>Warm focaccia with olive oil, sea salt, and rosemary.</p>
+            <span>$5.25</span>
+          </article>
+          <article class="menu-item reveal" data-category="dessert">
+            <h3>Burnt Basque Cheesecake</h3>
+            <p>Silky center, caramelized top, and a berry compote side.</p>
+            <span>$7.25</span>
+          </article>
+          <article class="menu-item reveal" data-category="bites">
+            <h3>Breakfast Tartine</h3>
+            <p>Avocado, soft egg, chili oil, and pickled onion on sourdough.</p>
+            <span>$9.00</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section experience-section">
+        <div class="experience-panel reveal">
+          <p class="eyebrow">Experience</p>
+          <h2>Bring a laptop, meet a friend, or just watch the barista pour.</h2>
+          <p>
+            The cafe balances clean service with an atmosphere that feels lived
+            in. Strong coffee, good seating, and a menu that moves with the
+            seasons.
+          </p>
+        </div>
+        <div class="hours-panel reveal">
+          <h3>Opening Hours</h3>
+          <ul class="hours-list">
+            <li><span>Mon - Fri</span><strong>7:00 AM - 7:00 PM</strong></li>
+            <li><span>Saturday</span><strong>8:00 AM - 8:00 PM</strong></li>
+            <li><span>Sunday</span><strong>8:00 AM - 5:00 PM</strong></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="visit" class="section visit-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Visit us</p>
+          <h2>Find us on the corner with the copper awning.</h2>
+        </div>
+        <div class="visit-grid">
+          <article class="contact-card reveal">
+            <h3>Address</h3>
+            <p>48 Willow Street, Downtown District</p>
+          </article>
+          <article class="contact-card reveal">
+            <h3>Contact</h3>
+            <p>Hello@maisonncafe.com</p>
+            <p>(555) 014-2187</p>
+          </article>
+          <article class="contact-card reveal">
+            <h3>Order ahead</h3>
+            <p>Pickup ready in 12 to 15 minutes.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Maison Noir Cafe. Coffee with character, every day.</p>
+      <a href="#home">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
