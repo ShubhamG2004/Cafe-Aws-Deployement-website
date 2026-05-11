@@ -667,3 +667,112 @@ main {
     align-items: flex-start;
   }
 }
+
+/* ── Focus styles ────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ── Nav link active-section indicator ──────────────────────────── */
+.site-nav a {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.site-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--accent);
+  transition: width 240ms ease;
+}
+
+.site-nav a:hover::after {
+  width: 100%;
+}
+
+/* ── Card lift & glow on hover ───────────────────────────────────── */
+.feature-card,
+.contact-card,
+.menu-item {
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.feature-card:hover,
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 72px rgba(212, 163, 115, 0.18), var(--shadow);
+}
+
+/* ── Menu item category accent bar ──────────────────────────────── */
+.menu-item {
+  border-top: 3px solid transparent;
+}
+
+.menu-item[data-category="coffee"] {
+  border-top-color: rgba(212, 163, 115, 0.7);
+}
+
+.menu-item[data-category="tea"] {
+  border-top-color: rgba(125, 211, 167, 0.7);
+}
+
+.menu-item[data-category="bites"] {
+  border-top-color: rgba(247, 210, 140, 0.7);
+}
+
+.menu-item[data-category="dessert"] {
+  border-top-color: rgba(219, 150, 180, 0.7);
+}
+
+/* ── Hero card shimmer line ──────────────────────────────────────── */
+.hero-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 163, 115, 0.55), transparent);
+}
+
+/* ── Footer divider & link underline ────────────────────────────── */
+.footer {
+  border-top: 1px solid var(--line);
+  margin-top: 36px;
+}
+
+.footer a {
+  position: relative;
+  padding-bottom: 1px;
+}
+
+.footer a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 220ms ease;
+}
+
+.footer a:hover::after {
+  width: 100%;
+}
+
+/* ── Button focus ring ───────────────────────────────────────────── */
+.button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* ── Smooth menu-item hide/show transition ───────────────────────── */
+.menu-item.is-hidden {
+  display: none;
+}
